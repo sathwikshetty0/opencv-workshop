@@ -506,41 +506,6 @@ With OpenCV and YOLO, you can create:
 
 ---
 
-## 📚 Quick Reference
-
-```python
-import cv2
-import numpy as np
-from ultralytics import YOLO
-
-# Read & show image
-img = cv2.imread("file.jpg")
-cv2.imshow("Window", img)
-cv2.waitKey(0)
-
-# Grayscale
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-# Resize
-resized = cv2.resize(img, (width, height))
-
-# Blur
-blur = cv2.GaussianBlur(img, (15, 15), 0)
-
-# Edge detection
-edges = cv2.Canny(img, 100, 200)
-
-# Webcam
-cap = cv2.VideoCapture(0)
-ret, frame = cap.read()
-cap.release()
-
-# YOLO
-model = YOLO("yolov8n.pt")
-results = model(frame)
-annotated = results[0].plot()
-```
-
 ---
 
 <div align="center">
